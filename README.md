@@ -25,4 +25,4 @@
 ## 4. Starting the Application
 
 One everything is ready, you can launch the application by running:
-`chainlit run app.py`
+`streamlit run distance.py`

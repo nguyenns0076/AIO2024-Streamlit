@@ -81,10 +81,11 @@ word = st.text_input("Your word")
 if st.button("Compute"):
     distances = dict()
     for vocab in vocabs:
-        distace = levenshtein_distance(word, vocab)
-        distances[vocab] = distace
+        distance = levenshtein_distance(word, vocab)
+        distances[vocab] = distance
 
     sorted_distances = dict(
         sorted(distances.items(), key=lambda item: item[1]))
     correct_words = list(sorted_distances.keys())[0]
     st.write('Correct:', correct_words)
+    st.write('Distance:', distances[correct_words])
